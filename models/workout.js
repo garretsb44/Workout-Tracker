@@ -37,8 +37,13 @@ const workoutSchema = new mongoose.Schema({
     }]
 });
 
-// userSchema.virtual('totalduration').get(function() {  
-//     return this.duration + ' ' + this.last;
+// workoutSchema.virtual('totalDuration').get(function() { 
+//     var result = 0;
+//     for (var i = 0; i < exercises.length; i++) {
+//         result += this.exercises[i].duration;
+//     }
+//     this.totalDuration = result;
+//     // return this.totalDuration; 
 // });
 
 const Workout = mongoose.model("Workout", workoutSchema);

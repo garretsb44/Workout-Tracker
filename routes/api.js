@@ -12,7 +12,7 @@ router.get("/api/workouts", (req, res) => {
 });
 router.put("/api/workouts/:id", ({ body, params }, res) => {
   Workout.findOneAndUpdate(
-    params.id,
+    {_id: params.id},
     {
       $push: {
         exercises: body
